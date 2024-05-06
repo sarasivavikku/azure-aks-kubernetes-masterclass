@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sarasivavikkuazureakskubernetesmasterclass 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sarasivavikkuazureakskubernetesmasterclass
+  template:
+    metadata:
+      labels:
+        app: sarasivavikkuazureakskubernetesmasterclass 
+    spec:
+      containers:
+        - name: sarasivavikkuazureakskubernetesmasterclass 
+          image: aksdevopsacrku.azurecr.io/sarasivavikkuazureakskubernetesmasterclass
+          ports:
+          - containerPort: 80
